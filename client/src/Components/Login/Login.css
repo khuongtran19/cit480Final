@@ -1,0 +1,231 @@
+.mainContainerLoginPage {
+  width: 100%;
+  height: 100vh;
+  background-color: #111418;
+  display: flex;
+}
+.leftLoginPage {
+  width: 34%;
+  background-color: black;
+  /* height: 93.%; */
+  background-image: url("./../../images/blackBack.jpg");
+  background-size: cover;
+}
+.leftLoginPage::before {
+  background-color: black;
+}
+.innerLeft {
+  /* width: 100px;
+    height: 100px;
+     background: linear-gradient(to bottom, black 100%); */
+}
+.rightLoginPage {
+  width: 66%;
+  height: 100%;
+  background-color: #111418;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+a {
+  text-decoration: none;
+}
+.txtLogLeft {
+  color: #fffffa;
+  font-size: 2.25rem;
+  font-weight: 300;
+  max-width: 452px;
+  font-family: Poppins, sans-serif;
+  margin-top: 62px;
+}
+.spTxtLogLeft {
+  font-weight: 500;
+  font-family: Poppins, sans-serif;
+}
+.notNumTxt {
+  color: #dee3e4;
+  font-size: 0.875rem;
+  margin-bottom: 0px;
+  margin-top: 17px;
+  font-family: Poppins, sans-serif;
+}
+.regisTxt {
+  color: #0d6efd;
+  font-weight: 500;
+  margin-bottom: 0px;
+  margin-left: 12px;
+  font-family: Poppins, sans-serif;
+  margin-top: 15px;
+}
+.loginYourAccTxt {
+  font-size: 1.75rem;
+  color: #ffff;
+  font-weight: 500;
+  line-height: 34px;
+  font-family: Poppins, sans-serif;
+}
+.logoApple {
+  fill: #dee3e4;
+  color: white;
+}
+.emailTxt {
+  color: #dee3e4;
+  margin-top: 10px;
+  font-family: Poppins, sans-serif;
+}
+.passTxt {
+  color: #dee3e4;
+  font-family: Poppins, sans-serif;
+}
+.rightLogInner {
+  width: 630px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.emailInput {
+  width: 96%;
+  border: none;
+  background: #232a31;
+  color: #fff;
+  padding: 0.81rem 0.96rem;
+  font-size: 16px;
+}
+.passwordInput {
+  width: 96%;
+  border: none;
+  background: #232a31;
+  color: #fff;
+  padding: 0.81rem 0.96rem;
+  font-size: 16px;
+}
+.txtForGotPass {
+  color: #0d6efd;
+  font-weight: 500;
+  font-family: Poppins, sans-serif;
+}
+.row1LogRight {
+  display: flex;
+}
+.lineBeforeR {
+  background-color: #6c757d;
+  height: 1px;
+  width: 100px;
+}
+.mainPasForPas {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.btnLogin {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+  padding: 9px 2.6rem;
+  font-weight: 500;
+  border-radius: 0.25rem;
+  font-weight: 500;
+
+  color: #ffff;
+  font-size: 1rem;
+  margin-top: 20px;
+  font-family: Poppins, sans-serif;
+}
+.orTxt {
+  font-size: 0.875rem;
+  color: #6c757d;
+  font-family: Poppins, sans-serif;
+}
+.lineAfterR {
+  background-color: #6c757d;
+  height: 1px;
+  width: 500px;
+}
+.mainTopOr {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  margin-top: 10px;
+}
+.topEmailInput {
+  width: 100%;
+}
+.btnGoogle {
+  background-color: #025bdf !important;
+}
+.btnGoogle div {
+  background-color: #025bdf !important;
+}
+.btnGoogle span {
+  color: #fff !important;
+}
+
+.innerLeft {
+  background: rgba(19, 21, 19, 0.5); /*  10% opaque green */
+  /* width:100%; */
+  height: 92%;
+  padding-left: 70px;
+  padding-top: 60px;
+}
+@media (max-width: 1287px) {
+  .innerLeft {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+@media (max-width: 1171px) {
+  .rightLogInner {
+    width: 86%;
+  }
+}
+
+@media (max-width: 767px) {
+  .mainContainerLoginPage {
+    flex-direction: column;
+    padding-bottom: 100px;
+    height: auto;
+  }
+
+  .leftLoginPage {
+    background-position: center;
+    width: auto;
+    height: 38%;
+  }
+  .rightLoginPage {
+    width: 100%;
+  }
+  .innerLeft {
+    height: 300px;
+  }
+}
+
+@media (max-width: 600px) {
+  .emailInput {
+    width: 95%;
+  }
+  .passwordInput {
+    width: 95%;
+  }
+}
+
+@media (max-width: 390px) {
+  .emailInput {
+    width: 92%;
+  }
+  .passwordInput {
+    width: 92%;
+  }
+}
+.swal-button {
+  padding: 7px 19px;
+  border-radius: 2px;
+  background-color: #4962b3;
+  font-size: 12px;
+  border: 1px solid #3e549a;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+  position: top;
+}
+.swal-overlay {
+  background-color: rgba(43, 165, 137, 0.45);
+}
