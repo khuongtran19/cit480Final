@@ -18,16 +18,12 @@ const Header = () => {
     <div className="headernavbar">
       <Navbar className="headernavbar" expand="lg">
         <Container fluid className="dorap">
-          <div>
+          <Link to="/">
             <h4 className="recipe">Recipe</h4>
-          </div>
+          </Link>
 
           <div className="mainform">
-            <Link to="/Home">
-              <Button className="btnone" variant="outline-light ">
-                Create Recipies
-              </Button>
-            </Link>
+            
             {switchButton === true ? (
               <Link to="/Login">
                 <Button variant="outline-light " onClick={changme}>
@@ -35,11 +31,18 @@ const Header = () => {
                 </Button>
               </Link>
             ) : (
-              <Link to="/">
-                <Button variant="outline-light " onClick={changethis}>
-                  Logout
-                </Button>
-              </Link>
+              <div>
+                <Link to="/Recipe">
+                  <Button className="btnone" variant="outline-light ">
+                    Create Recipies
+                  </Button>
+                </Link>
+                <Link to="/">
+                  <Button variant="outline-light " onClick={changethis}>
+                    Logout
+                  </Button>
+                </Link>
+              </div>
             )}
           </div>
         </Container>
