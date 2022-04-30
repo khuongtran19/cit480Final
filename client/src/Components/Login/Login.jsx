@@ -7,6 +7,7 @@ import axios from "axios";
 // import swal from "sweetalert";
 import swal from "sweetalert";
 import { Link } from "react-router-dom";
+import GOOGLE_KEY from "./../../../.env"
 
 const Login = () => {
   const navigate = useNavigate();
@@ -73,7 +74,7 @@ const Login = () => {
             <div>
               <GoogleLogin
                 className="btnGoogle"
-                clientId="677360402906-k4mm9bpq4tduegadicuefbirqpb2ebj8.apps.googleusercontent.com"
+                clientId={GOOGLE_KEY}
                 buttonText="Continue with Google"
                 onSuccess={responseGoogle}
                 onFailure={responseGoogle}
