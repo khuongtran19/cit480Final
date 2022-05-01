@@ -8,6 +8,7 @@ import { useState } from "react";
 import swal from "sweetalert";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import GOOGLE_KEY from "./../../../.env";
 const Register = () => {
   const [userName, setUserName] = useState("");
   const [email, setEmail] = useState("");
@@ -70,8 +71,8 @@ const Register = () => {
             <div>
               <GoogleLogin
                 className="btnGoogle"
-                clientId="677360402906-k4mm9bpq4tduegadicuefbirqpb2ebj8.apps.googleusercontent.com"
-                buttonText="Continue with Google"
+                clientId={GOOGLE_KEY}
+                buttonText="Login with Google"
                 onSuccess={responseGoogle}
                 onFailure={responseGoogle}
                 cookiePolicy={"single_host_origin"}
