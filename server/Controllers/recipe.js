@@ -2,10 +2,8 @@ const router = require("express").Router();
 const bodyparser = require("body-parser");
 const multer = require("multer");
 const path = require("path");
-const oxyy = require("../Models/oxyy");
+const recipe = require("../Models/recipe");
 const user = require("../Models/user");
-// const user = require("../Models/user");
-// const user = require("../Models/user");
 var ObjectId = require("mongodb").ObjectId;
 const storage = multer.diskStorage({
   destination: "./upload",
@@ -24,7 +22,7 @@ const upload = multer({
 router.post("/create", upload.single("profile"), async function (req, res) {
   console.log("Respoonse: ", req.body);
   try {
-    var data = new oxyy({
+    var data = new recipe({
       RecipeName: req.body.RecipeName,
       Ingredients: req.body.Ingredients,
       Image:  `http://localhost:4000/profile/${req.file.filename}`,
@@ -59,14 +57,9 @@ router.post("/create", upload.single("profile"), async function (req, res) {
 ///////////////////////////////////////////////////////////////////////
 router.get("/getall/:id", async function (req, res) {
   try {
-    // console.log("hjkhjkhjkhjkhk");
 
     const { id } = req.params;
-    // console.log(req.params.id);
-    // console.log("=========", id);
-    let data = await oxyy.find({ userId: id }).populate("userId");
-    // console.log("DATA: ", data);
-    // return res.status(200).send("OK");
+    let data = await recipe.find({ userId: id }).populate("userId");
     console.log("data", data);
     if (data) {
       res.json({
@@ -86,7 +79,7 @@ router.get("/getall/:id", async function (req, res) {
 
 router.get("/getall", async function (req, res) {
   try {
-    let data = await oxyy.find().populate("userId");
+    let data = await recipe.find().populate("userId");
     if (data) {
       res.json({
         message: "Your data ",

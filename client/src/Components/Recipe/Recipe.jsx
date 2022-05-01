@@ -78,7 +78,7 @@ const Recipe = () => {
       console.log("data", data);
       axios({
         method: "POST",
-        url: "http://localhost:4000/oxy/create",
+        url: "http://localhost:4000/recipe/create",
         data: data,
         headers: {
           "Content-Type": "multipart/form-data",

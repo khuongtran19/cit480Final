@@ -10,7 +10,6 @@ import GOOGLE_KEY from "./../../../.env";
 const Register = () => {
   const [userName, setUserName] = useState("");
   const [email, setEmail] = useState("");
-  // const [checkbox, setChecker] = useState("");
   const [isChecked, setIsChecked] = useState(false);
   const [password, setPassword] = useState("");
   const navigate = useNavigate();

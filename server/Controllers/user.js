@@ -3,6 +3,8 @@ const bodyparser = require("body-parser");
 const user = require("../Models/user");
 const jwt = require("jsonwebtoken");
 const nodemailer = require("nodemailer");
+require('dotenv').config();
+
 var smtpTransport = require("nodemailer-smtp-transport");
 
 router.post("/create", async function (req, res) {
@@ -31,7 +33,6 @@ router.post("/create", async function (req, res) {
 /////////////////////////////////////////////////////////////////////
 
 router.post("/find", async (req, res) => {
-  //console.log("CREATATAT");
   try {
     let data = await user.findOne({ _id: req.body.id });
     if (data) {
@@ -83,7 +84,6 @@ router.post("/forget_password", async (req, res) => {
   console.log("-----", req.body.email);
 
   const data = await user.findOne({ email: req.body.email });
-  // console.log("data", data)
   if (data == null) {
     res.json({
       status: false,
@@ -91,8 +91,6 @@ router.post("/forget_password", async (req, res) => {
     });
   } else {
     const otpcode = Math.floor(Math.random() * 10000 + 1);
-
-    //console.log(req.body.email, otpcode)
     await sendMailer(req.body.email, otpcode);
     await user.findOneAndUpdate(
       { email: req.body.email },
@@ -146,13 +144,13 @@ async function sendMailer(email, otpcode) {
       host: "smtp.gmail.com",
 
       auth: {
-        user: "ciitlahore383@gmail.com", // generated ethereal user
-        pass: "Bakerabu@1234", // generated ethereal password
+        user: GOOGLE_EMAIL, // generated ethereal user
+        pass: GOOGLE_PASSWORD, // generated ethereal password
       },
     })
   );
   let info = await transporter.sendMail({
-    from: "ciitlahore383@gmail.com", // sender address
+    from: GOOGLE_EMAIL, // sender address
     to: email, // list of receivers
     subject: "Email verification code", // Subject line
     text: "Hello world?", // plain text body

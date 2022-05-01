@@ -11,12 +11,12 @@ const Home = () => {
 
   useEffect(() => {
     const id = localStorage.getItem("userID");
-    axios.get("http://localhost:4000/oxy/getall").then((response) => {
+    axios.get("http://localhost:4000/recipe/getall").then((response) => {
       console.log("recipe1", response.data.data);
       setRecipe(response.data.data);
     });
     console.log("faateh ", id);
-    axios.get(`http://localhost:4000/oxy/getall/${id}`).then((response) => {
+    axios.get(`http://localhost:4000/recipe/getall/${id}`).then((response) => {
       console.log("Recipe2: ", response.data.data);
       setRecipe2(response.data.data);
     });

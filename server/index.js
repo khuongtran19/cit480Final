@@ -8,14 +8,14 @@ app.use(cors())
 const morgan = require('morgan');
 const dbconnection = require("./database")
 const user = require('./Controllers/user')
-const oxyy = require('./Controllers/oxyee')
+const recipe = require('./Controllers/recipe')
 
 
 
 dbconnection();
 
 app.use('/profile', express.static('upload'));
-app.use('/oxy',oxyy)
+app.use('/client',recipe)
 app.use('/api',user)
 
 const PORT = process.env.PORT || 4000

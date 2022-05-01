@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 //user schema
-const oxyySchema = mongoose.Schema({
+const recipeSchema = mongoose.Schema({
   RecipeName: {
     type: String,
   },
@@ -28,4 +28,4 @@ const oxyySchema = mongoose.Schema({
   },
 });
 //user Model
-module.exports = mongoose.model("oxyys", oxyySchema);
+module.exports = mongoose.model("recipes", recipeSchema);
