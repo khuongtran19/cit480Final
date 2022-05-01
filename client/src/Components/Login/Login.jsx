@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./Login.css";
-import logoPic from "./../../images/logo-2-light.png";
 import GoogleLogin from "react-google-login";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";

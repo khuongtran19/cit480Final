@@ -1,7 +1,5 @@
 import React from "react";
 import "./Register.css";
-import logoPic from "./../../images/logo-2-light.png";
-import { AiFillApple } from "react-icons/ai";
 import GoogleLogin from "react-google-login";
 import { Link } from "react-router-dom";
 import { useState } from "react";
