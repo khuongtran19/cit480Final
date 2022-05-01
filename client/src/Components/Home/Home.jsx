@@ -1,11 +1,8 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import "./Home.css";
-import home1Pic from "./../../images/home1Pic.png";
-import home2Pic from "./../../images/home2Pic.png";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import swal from "sweetalert";
 const Home = () => {
   const [changeBack, setChangeBack] = useState("");
   const [changeData, setChangeData] = useState(false);
@@ -42,7 +39,7 @@ const Home = () => {
                 onChange={(e) => setChangeData(true)}
                 className="radioInput"
               />
-                <p className="recipeTbTxt"> Recipe listed by you.</p>
+              <p className="recipeTbTxt"> Recipe listed by you.</p>
             </div>
             <div className="topRadio">
               <input

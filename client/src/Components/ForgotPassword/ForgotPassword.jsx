@@ -1,6 +1,5 @@
 import React from "react";
 import { useState } from "react";
-import logoPic from "./../../images/logo-2-light.png";
 import "./ForgotPassword.css";
 import GoogleLogin from "react-google-login";
 import { Link } from "react-router-dom";
