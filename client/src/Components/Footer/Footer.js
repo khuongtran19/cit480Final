@@ -1,12 +1,17 @@
-import React from "react";
-import "../Footer/Footer.css";
+import React from 'react';
+import './Footer.css';
 
-export default function Footer() {
-  return (
-    <div>
-      <div className="footermain">
-        <h1 className="footerhead">@ By students of CIT480 class</h1>
-      </div>
-    </div>
-  );
+let Footer = () => {
+    return (
+        
+        
+            <div className="container center">
+                <span className="footerText black-text text-darken-5">Copyrights 2020 - Recipe App</span>
+            </div>
+        
+            
+        
+    )
 }
+
+export default Footer;

@@ -1,25 +1,37 @@
-require('dotenv').config();
-const express = require('express');
-const bodyparser = require('body-parser');
-const cors = require("cors")
+import express from 'express';
+import mongoose from 'mongoose';
+import bodyparser from 'body-parser';
+import routes from './Route/diaryRoute';
+
+import cors from 'cors';
+
+
 const app = express();
-app.use(express.json());
-app.use(cors())
-const morgan = require('morgan');
-const dbconnection = require("./database")
-const user = require('./Controllers/user')
-const recipe = require('./Controllers/recipe')
+const PORT = 4000;
 
+// mongo connection
+mongoose.Promise = global.Promise;
 
+// recipesDB mongoose connection
+mongoose.connect('mongodb://localhost/recipesDB', {
+    usedNewUrlParser: true,
+    useUnifiedTopology: true
+});
 
-dbconnection();
+// bodyparser setup
+app.use(bodyparser.urlencoded({ extended: true }));
+app.use(bodyparser.json());
 
-app.use('/profile', express.static('upload'));
-app.use('/client',recipe)
-app.use('/api',user)
+// CORS setup
+app.use(cors());
 
-const PORT = process.env.PORT || 4000
+routes(app);
+//routesComment(app);
+
+app.get('/', (req, res) => {
+    res.send(`Recipe App is running ${PORT}`);
+});
 
 app.listen(PORT, () => {
-    console.log('your server runing at', + PORT);
+    console.log(`Recipe App is running on port ${PORT}`);
 });

@@ -1,45 +1,11 @@
-.headernavbar{
-    background-color: #15262d ;
-    border-bottom: 1px solid gray;
-}
-.recipe{
-    color: #fff;
-    font-family: 'Ms Madi';
-    font-size: 40px;
-    font-weight: 600;
-margin: 10px 10px 10px 70px;
-}
-.mainform{
-    display: flex;
-    justify-content: end;
-    margin-right: 100px;
-    gap: 20px;
-}
-.btnone{
-    margin-right: 100px;
-    font-weight: 600;
-    font-family: Poppins, sans-serif;
-    text-transform: uppercase;
-    word-spacing: 2px;
-}
-@media only screen and (max-width: 700px) {
-    .recipe {
-        margin: 10px 10px 10px 20px;
+@media only screen and (max-width: 600px) {
+    div .header-text {
+      font-size: 22px;
+      
     }
-    .mainform{
-        margin-right: 20px;
-    }
-    .btnone{
-        margin-right: 10px;
-        font-weight: 600;
-        word-spacing: 0px;
-    }
+
   }
-  @media only screen and (max-width: 417px) {
-.dorap{
-display: flex !important;
-justify-content: center !important;
-align-items: center !important;
-padding-bottom: 10px;
-}
+
+  .userGreet {
+    margin-left: 15px;
   }
