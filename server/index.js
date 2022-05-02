@@ -10,7 +10,7 @@ dotenv.config()
 
 const PORT = process.env.PORT || 5050
 const app = express();
-const uri = process.env.ATLAS_URI
+const uri = process.env.ATLAS_URI || "mongodb+srv://cit480:Echizen19@recipe.qfv40.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 
 // mongo connection
 mongoose.Promise = global.Promise;
