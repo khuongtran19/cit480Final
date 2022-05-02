@@ -1,22 +1,32 @@
 import express from 'express';
+import dotenv from "dotenv"
 import mongoose from 'mongoose';
 import bodyparser from 'body-parser';
-import routes from './Route/diaryRoute';
+import routes from './route.js';
 
 import cors from 'cors';
 
+dotenv.config()
 
+const PORT = process.env.PORT || 5050
 const app = express();
-const PORT = 4000;
+const uri = process.env.ATLAS_URI
 
 // mongo connection
 mongoose.Promise = global.Promise;
 
 // recipesDB mongoose connection
-mongoose.connect('mongodb://localhost/recipesDB', {
-    usedNewUrlParser: true,
-    useUnifiedTopology: true
-});
+mongoose.connect(
+    uri,
+    {
+        maxPoolSize: 50, 
+        wtimeoutMS: 2500,
+        useNewUrlParser: true
+    })
+const connection = mongoose.connection;
+connection.once('open', () => {
+  console.log("MongoDB database connection established successfully")
+})
 
 // bodyparser setup
 app.use(bodyparser.urlencoded({ extended: true }));
@@ -33,5 +43,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`Recipe App is running on port ${PORT}`);
+  console.log(`Recipe App is running on port ${PORT}`);
 });

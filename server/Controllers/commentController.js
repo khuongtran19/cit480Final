@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import { CommentSchema } from '../Model/commentModel';
+import { CommentSchema } from '../Models/commentModel.js';
 
 const Comment = mongoose.model('Comment',CommentSchema);
 

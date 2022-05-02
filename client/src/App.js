@@ -7,12 +7,15 @@ import Footer from './Footer/Footer'
 import Header from './Header/Header'
 import Create from './Create/Create'
 import Nav from './Nav/Nav'
+import {Router} from '@reach/router'
+
+
 
 function App() {
   return (
     <Router>
         <Demo path="/"/>
-        <Create path="/Create"/>
+        <Create path="/create"/>
     </Router>
   );
 }

@@ -1,5 +1,5 @@
-import { addNewRecipe, getRecipes, getRecipeById, updateRecipe, deleteRecipe } from '../Controller/recipeController';
-import { addNewComment, getComments} from '../Controller/commentController';
+import { addNewRecipe, getRecipes, getRecipeById, updateRecipe, deleteRecipe } from './Controllers/recipeController.js';
+import { addNewComment, getComments} from './Controllers/commentController.js';
 
 
 
