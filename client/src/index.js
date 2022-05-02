@@ -33,8 +33,8 @@ componentDidMount() {
     }
 });
 
-const recipeData = 'http://localhost:4000/recipes/';
-const commentData = 'http://localhost:4000/comment/';
+const recipeData = 'http://localhost:5050/recipes/';
+const commentData = 'http://localhost:5050/comment/';
 
 fetch(recipeData)
   .then((response) => {

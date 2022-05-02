@@ -12,7 +12,7 @@ function App() {
   return (
     <Router>
         <Demo path="/"/>
-        <Create path="/create"/>
+        <Create path="/Create"/>
     </Router>
   );
 }
