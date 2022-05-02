@@ -1,6 +1,7 @@
 import React from 'react';
 //import {BrowserRouter as Router, Switch, Route, Link, useParams} from 'react-router-dom';
 import axios from 'axios';
+import { navigate } from '@reach/router';
 
 class Create extends React.Component {
     constructor(props) {
@@ -22,6 +23,7 @@ class Create extends React.Component {
         })
         .then((response) => {
             console.log(response);
+            navigate('/');
         })
         .catch((error) => {
             console.log(error);

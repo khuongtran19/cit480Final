@@ -1,6 +1,7 @@
 import React from 'react';
 import './CommentForm.css';
 import axios from 'axios';
+import { navigate } from '@reach/router';
 
 class CommentForm extends React.Component {
 
@@ -13,6 +14,7 @@ class CommentForm extends React.Component {
             comment: this.refs.comment.value,
         })
         .then((response) => {
+            navigate('/');
             console.log(response);    
         })
         
