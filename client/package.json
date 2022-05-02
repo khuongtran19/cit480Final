@@ -1,5 +1,5 @@
 {
-  "name": "react-is-fun",
+  "name": "cit480recipes",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -12,6 +12,7 @@
     "bootstrap": "^4.4.1",
     "express": "^4.17.1",
     "firebase": "^4.0.0",
+    "firebaseui": "^2.0.0",
     "mongoose": "^5.9.7",
     "nodemon": "^2.0.2",
     "react": "^16.12.0",
