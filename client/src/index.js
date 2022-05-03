@@ -117,7 +117,6 @@ import Login from './Login/Login';
 
         render() {
             return (
-
                 <div>
                     <div>
                         <Header userName= {this.state.displayName} logOutUser={this.logOutUser} />
@@ -130,23 +129,9 @@ import Login from './Login/Login';
                     <div className="row">
                         {this.renderItems(this.state.displayName)}
                     </div>
-                    
-                    {/* <footer className="page-footer orange lighten-4">
-                        <Footer/>
-                    </footer> */}
-                    
-                </div>
-
-                );            
-        }
-        }
+            </div>
+        );            
+    }
+}
     
-ReactDOM.render(              
-                    
-                        
-                        <Main/>
-                        
-                    
-                
-                , 
-                document.getElementById('root'));
+ReactDOM.render(<Main/>, document.getElementById('root'));

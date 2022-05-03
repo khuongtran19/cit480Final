@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import  firebase from '../Firebase';
 import { navigate } from '@reach/router';
-import * as firebaseui from "firebaseui";
+// import * as firebaseui from "firebaseui";
 import FormError from '../FormError/FormError';
 
 class Login extends Component {
@@ -50,15 +50,15 @@ class Login extends Component {
         });
       }
 
-      componentDidMount() {
-        const uiConfig = {
-          signInSuccessUrl: "https://netflix-clone-ankur.herokuapp.com/", //This URL is used to return to that page when we got success response for phone authentication.
-          signInOptions: [firebase.auth.PhoneAuthProvider.PROVIDER_ID],
-          tosUrl: "https://netflix-clone-ankur.herokuapp.com/"
-        };
-        var ui = new firebaseui.auth.AuthUI(firebase.auth());
-        ui.start("#firebaseui-auth-container", uiConfig);
-      }
+      // componentDidMount() {
+      //   const uiConfig = {
+      //     signInSuccessUrl: "",
+      //     signInOptions: [firebase.auth.PhoneAuthProvider.PROVIDER_ID],
+      //     tosUrl: ""
+      //   };
+      //   var ui = new firebaseui.auth.AuthUI(firebase.auth());
+      //   ui.start("#firebaseui-auth-container", uiConfig);
+      // }
 
     render() {
         
@@ -101,7 +101,7 @@ class Login extends Component {
                             />
                             </section>
                             <div className="input-field col s6">
-                            <div id="firebaseui-auth-container"></div>
+                            {/* <div id="firebaseui-auth-container"></div> */}
                             <button className="btn btn-primary" type="submit">
                                 Log in
                             </button>

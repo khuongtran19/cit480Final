@@ -9,7 +9,7 @@ export const RecipeSchema = new Schema({
     },
     chef: {
         type: String,
-        required: true
+        required: false
     },
     preptime: {
         type: Number,
@@ -21,11 +21,11 @@ export const RecipeSchema = new Schema({
     },
     url: {
         type: String,
-        required: true
+        required: false
     },
     img: {
         type: String,
-        required: true
+        required: false
     },
     created_date: {
         type: Date,

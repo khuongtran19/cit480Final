@@ -24,26 +24,16 @@ class Chef extends React.Component {
                         <p><span className="orange-text text-darken-2"><span role="img" aria-label="clock">⏰</span> Cook Time: </span>{item.cooktime}</p>
                         <p><span className="orange-text text-darken-2"><span role="img" aria-label="book">📖</span> Instructions: </span>{item.recipesToDo}</p>
                         <a href={item.url} target='_blank' rel="noopener noreferrer"><span role="img" aria-label="clip">📎</span> Reference</a> 
-                    </div>                    
+                    </div>
+                    <div className="card card-action">
+                        {comments && comments.map(comment => (
+                                <CommentBox path='/'  userName={userName} key={comment._id} comment={comment} item={item} />  
+                            ))}
+                        {userName && (
+                            <CommentForm className="card-image" userName={userName} foreignID={item._id}/>
+                        )}
+                    </div>                 
                 </div>
-                
-                <div className="card card-action">
-                    
-                    {comments &&
-                        comments.map(comment => (
-                            <CommentBox path='/'  userName={userName} key={comment._id} comment={comment} item={item} />  
-                        ))                  
-                    }
-                    
-                    
-
-                    {userName && (
-                        <CommentForm className="card-image" userName={userName} foreignID={item._id}/>
-                                    )}
-
-                    {/* <CommentForm className="card-image" userName={userName} foreignID={item._id}/> */}
-                </div>
-                
             </div>
         )
     }

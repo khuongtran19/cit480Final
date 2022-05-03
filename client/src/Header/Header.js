@@ -16,7 +16,7 @@ import { FaUsers } from 'react-icons/fa';
                             <div className="navbar-nav ml-auto">
                             
                             <div className="left hide-on-med-and-down black-text text-darken-5 userGreet">
-                                {userName}
+                                Welcome, {userName}
                             </div>
                                 <ul className="right hide-on-med-and-down">
                                     <li><a className="black-text text-darken-5" href="/">Home</a></li>

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import FormError from '../FormError/FormError';
 import  firebase from '../Firebase';
-import * as firebaseui from "firebaseui";
+// import * as firebaseui from "firebaseui";
 class Register extends Component {
 constructor(props) {
     super(props);
@@ -17,15 +17,15 @@ constructor(props) {
     this.handleSubmit = this.handleSubmit.bind(this);
 }
 
-componentDidMount() {
-  const uiConfig = {
-    signInSuccessUrl: "https://netflix-clone-ankur.herokuapp.com/", //This URL is used to return to that page when we got success response for phone authentication.
-    signInOptions: [firebase.auth.PhoneAuthProvider.PROVIDER_ID],
-    tosUrl: "https://netflix-clone-ankur.herokuapp.com/"
-  };
-  var ui = new firebaseui.auth.AuthUI(firebase.auth());
-  ui.start("#firebaseui-auth-container", uiConfig);
-}
+// componentDidMount() {
+//   const uiConfig = {
+//     signInSuccessUrl: "",
+//     signInOptions: [firebase.auth.PhoneAuthProvider.PROVIDER_ID],
+//     tosUrl: ""
+//   };
+//   var ui = new firebaseui.auth.AuthUI(firebase.auth());
+//   ui.start("#firebaseui-auth-container", uiConfig);
+// }
 
 handleChange(e) {
     const itemName = e.target.name;
@@ -134,7 +134,7 @@ handleChange(e) {
                     />
                   </section>
                 </div>
-                <div id="firebaseui-auth-container"></div>
+                {/* <div id="firebaseui-auth-container"></div> */}
                 <div className="form-group text-right mb-0">
                   <button className="btn btn-primary" type="submit">
                     Register

@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import { RecipeSchema } from '../Models/recipeModel.js';
+import { RecipeSchema } from '../Models/recipeModel.mjs';
 
 const Recipe = mongoose.model('Recipe', RecipeSchema);
 
