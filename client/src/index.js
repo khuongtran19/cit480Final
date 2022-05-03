@@ -2,7 +2,7 @@
 import React, {useState} from 'react'
 import ReactDOM from 'react-dom'
 import Chef from './Chef/Chef'
-//import Footer from './Footer/Footer'
+import Footer from './Footer/Footer'
 import Header from './Header/Header'
 import Create from './Create/Create'
 
@@ -126,8 +126,11 @@ import Login from './Login/Login';
                     <Router><Create path="/Create" /></Router>
                     
 
-                    <div className="row">
+                    <div className="row container">
                         {this.renderItems(this.state.displayName)}
+                    </div>
+                    <div>
+                        <Footer />
                     </div>
             </div>
         );            

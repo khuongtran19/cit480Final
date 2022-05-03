@@ -2,3 +2,8 @@ form.commentForm {
     margin: auto 10px;
     width: 80%;
 }
+
+.btn{
+    color: white;
+    background-color:#c0392b;
+}

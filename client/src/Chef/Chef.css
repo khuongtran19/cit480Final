@@ -3,6 +3,12 @@ div.card.card-action {
     
 }
 
-div.recipeCard {
-    height: 1200px;
+.text-label{
+    color:#e67e22;
+}
+
+.card-content{
+    font-size: 30px;
+    color: white;
+    background-color: #f39c12;
 }

@@ -9,29 +9,29 @@ import { FaUsers } from 'react-icons/fa';
             return (
                 <div className="navbar-fixed">
                     <nav>
-                        <div className="nav-wrapper header nav-wrapper orange lighten-4">
+                        <div className="nav-wrapper header nav-wrapper header-div">
                             
-                            <a href="/" className="brand-logo center black-text text-darken-5 header-text">Recipes Repo</a>
+                            <a href="/" className="brand-logo center white-text text-darken-5 header-text">Recipes Repo</a>
                             
                             <div className="navbar-nav ml-auto">
                             
-                            <div className="left hide-on-med-and-down black-text text-darken-5 userGreet">
+                            <div className="left hide-on-med-and-down white-text text-darken-5 userGreet">
                                 Welcome, {userName}
                             </div>
                                 <ul className="right hide-on-med-and-down">
-                                    <li><a className="black-text text-darken-5" href="/">Home</a></li>
+                                    <li><a className="white-text text-darken-5" href="/">Home</a></li>
                                     {userName && (
-                                        <li><a className="black-text text-darken-5" href="/Create">
+                                        <li><a className="white-text text-darken-5" href="/Create">
                                             <FaUsers/> Create</a></li>
                                     )}           
                                     {!userName && (
-                                        <li><a className="black-text text-darken-5" href="/Register">Register</a></li>
+                                        <li><a className="white-text text-darken-5" href="/Register">Register</a></li>
                                     )}
                                     {!userName && (
-                                        <li><a className="black-text text-darken-5" href="/Login">Login</a></li>
+                                        <li><a className="white-text text-darken-5" href="/Login">Login</a></li>
                                     )}
                                     {userName &&(
-                                        <li><a className="black-text text-darken-5" href="/"
+                                        <li><a className="white-text text-darken-5" href="/"
                                         onClick={e => logOutUser(e)} >Logout</a></li>
                                     )}
 
