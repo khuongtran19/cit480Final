@@ -13,10 +13,11 @@ import { FaUsers } from 'react-icons/fa';
                             
                             <a href="/" className="brand-logo center white-text text-darken-5 header-text">Recipes Repo</a>
                             
+                            
                             <div className="navbar-nav ml-auto">
                             
                             <div className="left hide-on-med-and-down white-text text-darken-5 userGreet">
-                                Welcome, {userName}
+                                {userName && (<div>Welcome, {userName}</div>)}    
                             </div>
                                 <ul className="right hide-on-med-and-down">
                                     <li><a className="white-text text-darken-5" href="/">Home</a></li>

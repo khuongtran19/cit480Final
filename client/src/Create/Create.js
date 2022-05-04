@@ -12,7 +12,7 @@ class Create extends React.Component {
     submitRecipe(e) {
         e.preventDefault();
 
-        axios.post("http://localhost:5050/recipes/",{
+        axios.post("http://54.242.158.92:5000/api/recipes/",{
             title: this.refs.title.value,
             chef: this.refs.chef.value,
             preptime: this.refs.preptime.value,

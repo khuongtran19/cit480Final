@@ -45,8 +45,8 @@ import Login from './Login/Login';
             });
             
             // const recipeData = './data.JSON';
-            const recipeData = 'http://localhost:5050/recipes/';
-            const commentData = 'http://localhost:5050/comment/';
+            const recipeData = 'http://localhost:5000/api/recipes/';
+            const commentData = 'http://localhost:5000/api/comment/';
 
             // fetch recipe
             fetch(recipeData)

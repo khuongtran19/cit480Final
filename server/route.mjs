@@ -5,7 +5,7 @@ import { addNewComment, getComments} from './Controllers/commentController.mjs';
 
 const routes = app => {
 
-    app.route('/comment')
+    app.route('/api/comment')
 
     // GET endpoint
         .get(getComments)
@@ -15,7 +15,7 @@ const routes = app => {
 
 
 
-    app.route('/recipes')
+    app.route('/api/recipes')
     // GET endpoint
         .get(getRecipes)
 
@@ -26,7 +26,7 @@ const routes = app => {
 
 
 
-    app.route('/recipes/:RecipeId')
+    app.route('/api/recipes/:RecipeId')
     // GET specific recipe
         .get(getRecipeById)
 

@@ -8,7 +8,7 @@ class CommentForm extends React.Component {
     submitComment(e) {
         e.preventDefault();
 
-        axios.post("http://localhost:5050/comment/",{
+        axios.post("http://localhost:5000/api/comment/",{
             user: this.refs.user.value,
             foreignID: this.refs.foreignID.value,
             comment: this.refs.comment.value,

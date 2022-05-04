@@ -16,8 +16,7 @@ class CommentBox extends React.Component {
          }
             return (
                 <div className="commentBox__text">
-                     {commentDataPanel}
-                     
+                     {commentDataPanel}   
                 </div>
                 
             )   

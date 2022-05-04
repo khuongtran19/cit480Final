@@ -8,9 +8,17 @@ import cors from 'cors';
 
 dotenv.config()
 
-const PORT = process.env.PORT || 5050
+const PORT = process.env.PORT || 5000
 const app = express();
-const uri = process.env.ATLAS_URI || "mongodb+srv://cit480:Echizen19@recipe.qfv40.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+const uri = process.env.ATLAS_URI
+
+// CORS setup
+const corsOptions = {
+  origin: '*',
+  credentials:true,
+  optionSuccessStatus:200,
+}
+app.use(cors());
 
 // mongo connection
 mongoose.Promise = global.Promise;
@@ -31,9 +39,6 @@ connection.once('open', () => {
 // bodyparser setup
 app.use(bodyparser.urlencoded({ extended: true }));
 app.use(bodyparser.json());
-
-// CORS setup
-app.use(cors());
 
 routes(app);
 //routesComment(app);
